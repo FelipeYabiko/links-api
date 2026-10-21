@@ -1,0 +1,52 @@
+{
+  "name": "links-api",
+  "version": "1.0.0",
+  "description": "API REST de encurtador de URLs com autenticação JWT e estatísticas de cliques.",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeYabiko/links-api.git"
+  },
+  "author": "Felipe Yabiko Nogueira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FelipeYabiko/links-api/issues"
+  },
+  "homepage": "https://github.com/FelipeYabiko/links-api#readme",
+  "dependencies": {
+    "@fastify/jwt": "^10.2.5",
+    "@fastify/rate-limit": "^11.2.1",
+    "@fastify/swagger": "^9.9.2",
+    "@fastify/swagger-ui": "^6.1.2",
+    "@fastify/type-provider-typebox": "^6.3.0",
+    "ajv-formats": "^3.0.1",
+    "better-sqlite3": "^13.0.3",
+    "fastify": "^5.12.7",
+    "typebox": "^1.4.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.5",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  }
+}

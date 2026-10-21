@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      JWT_SECRET: ${JWT_SECRET:?defina JWT_SECRET no .env}
+      BASE_URL: ${BASE_URL:-http://localhost:3000}
+    volumes:
+      - links-data:/data
+
+volumes:
+  links-data:
